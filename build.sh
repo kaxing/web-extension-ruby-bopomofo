@@ -7,6 +7,10 @@ EXT_DIR="$SCRIPT_DIR/V3"
 OUTPUT_FILE="$SCRIPT_DIR/bopomofo-ruby.zip"
 
 echo "Building dictionary from TSV files..."
+echo "Checking for Unihan data..."
+if [ ! -f "$SCRIPT_DIR/data/Unihan_Readings.txt" ]; then
+  node "$SCRIPT_DIR/scripts/import-unihan.js"
+fi
 node "$SCRIPT_DIR/scripts/build-dictionary.js"
 
 echo ""

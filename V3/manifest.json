@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Bopomofo Ruby Annotation",
+  "version": "0.0.1",
+  "description": "Adds Bopomofo (注音) ruby annotations above Traditional Chinese characters",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ruby-bopomofo@kaxing.info",
+      "data_collection_permissions": {
+        "collects_data": false,
+        "required": ["none"]
+      }
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "action": {
+    "default_icon": {
+      "48": "icons/icon-48.png"
+    },
+    "default_title": "Bopomofo Ruby",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dictionary.js", "segmenter.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

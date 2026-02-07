@@ -1,0 +1,14 @@
+# Data sources (auto-downloaded)
+data/Unihan.zip
+data/Unihan_Readings.txt
+
+# Build artifacts
+bopomofo-ruby.zip
+V3/dictionary.js
+
+# OS metadata
+.DS_Store
+**/ .DS_Store
+
+# Notes/Temp
+_notes/

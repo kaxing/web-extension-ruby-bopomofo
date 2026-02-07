@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 180px;
+      padding: 10px;
+      font-family: system-ui, sans-serif;
+      font-size: 13px;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+    }
+    .colors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .color-btn {
+      width: 32px;
+      height: 32px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .color-btn:hover {
+      border-color: #666;
+    }
+    .color-btn.active {
+      border-color: #000;
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000;
+    }
+    .color-btn[data-color="red"] { background: #E91E63; }
+    .color-btn[data-color="yellow"] { background: #F59E0B; }
+    .color-btn[data-color="green"] { background: #10B981; }
+    .color-btn[data-color="blue"] { background: #3B82F6; }
+    .color-btn[data-color="black"] { background: #000000; }
+    .color-btn[data-color="grey"] { background: #6B7280; }
+  </style>
+</head>
+<body>
+  <h3>Bopomofo Annotation Color | 注音顏色</h3>
+  <div class="colors">
+    <button class="color-btn" data-color="red" title="Red"></button>
+    <button class="color-btn" data-color="yellow" title="Yellow"></button>
+    <button class="color-btn" data-color="green" title="Green"></button>
+    <button class="color-btn" data-color="blue" title="Blue"></button>
+    <button class="color-btn" data-color="black" title="Black"></button>
+    <button class="color-btn" data-color="grey" title="Grey"></button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

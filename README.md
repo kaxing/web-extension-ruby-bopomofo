@@ -3,12 +3,19 @@
 
 Available on Firefox Add-ons: https://addons.mozilla.org/en-US/firefox/addon/bopomofo-ruby-annotation/
 
-![Screenshot](screenshot.png)
+## Looking for a new icon
+If anyone would like to contribute a new icon for this extension, please feel free to open a PR.
 
 ## How to build
 ```bash
 bash ./build.sh
 ```
+
+## How to use local build add-on
+
+Open: `about:debugging#/runtime/this-firefox`
+
+![Screenshot](screenshot.png)
 
 ## References
 
